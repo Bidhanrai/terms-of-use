@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Expense Tracker</title>
+<meta name="description" content="Terms of Service for the Expense Tracker mobile app. The rules that apply when you use the App.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf7;
+    --surface: #ffffff;
+    --ink: #1a1a1a;
+    --ink-muted: #4a4a4a;
+    --ink-soft: #6b6b6b;
+    --accent: #2e8b7b;
+    --accent-soft: #e8f3f0;
+    --border: #e5e5e0;
+    --code-bg: #f4f4ef;
+    --max-width: 720px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141413;
+      --surface: #1c1c1a;
+      --ink: #f0f0ed;
+      --ink-muted: #c4c4bf;
+      --ink-soft: #8a8a85;
+      --accent: #4fb3a0;
+      --accent-soft: #1e2e2a;
+      --border: #2a2a27;
+      --code-bg: #242422;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  header.masthead {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 32px;
+    margin-bottom: 48px;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(36px, 5vw, 52px);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .meta {
+    color: var(--ink-soft);
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .meta span::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--ink-soft);
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+
+  .meta span:first-child::before {
+    display: none;
+  }
+
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 48px;
+  }
+
+  nav.toc h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+
+  nav.toc ol {
+    list-style: none;
+    counter-reset: toc;
+  }
+
+  nav.toc li {
+    counter-increment: toc;
+    margin: 4px 0;
+  }
+
+  nav.toc a {
+    color: var(--ink-muted);
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding: 4px 0;
+    transition: color 0.15s ease;
+  }
+
+  nav.toc a::before {
+    content: counter(toc, decimal-leading-zero) '  ';
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+    margin-right: 8px;
+  }
+
+  nav.toc a:hover {
+    color: var(--accent);
+  }
+
+  .summary-card {
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 48px;
+  }
+
+  .summary-card h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+
+  .summary-card p {
+    color: var(--ink-muted);
+    font-size: 15px;
+  }
+
+  h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-top: 56px;
+    margin-bottom: 20px;
+    scroll-margin-top: 32px;
+  }
+
+  h2 .section-number {
+    color: var(--ink-soft);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: var(--ink-muted);
+    margin-bottom: 16px;
+  }
+
+  ul {
+    margin-bottom: 16px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  ul li {
+    color: var(--ink-muted);
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  ul li::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 13px;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  ul li strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+  }
+
+  a:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  code {
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: ui-monospace, 'SF Mono', Consolas, monospace;
+    font-size: 0.9em;
+    color: var(--ink);
+  }
+
+  .callout {
+    border-left: 3px solid var(--accent);
+    background: var(--surface);
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .callout p {
+    margin-bottom: 0;
+    color: var(--ink-muted);
+    font-size: 15px;
+  }
+
+  .callout strong {
+    color: var(--ink);
+  }
+
+  .emphatic {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-muted);
+  }
+
+  .emphatic p {
+    margin-bottom: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 13px;
+    color: var(--ink);
+  }
+
+  .emphatic p:last-child {
+    margin-bottom: 0;
+  }
+
+  footer.page-footer {
+    margin-top: 96px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    color: var(--ink-soft);
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  footer.page-footer a {
+    color: var(--ink-muted);
+    text-decoration: none;
+  }
+
+  footer.page-footer a:hover {
+    color: var(--accent);
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 40px 20px 64px;
+    }
+
+    h2 {
+      margin-top: 44px;
+      font-size: 24px;
+    }
+
+    nav.toc, .summary-card {
+      padding: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="masthead">
+    <span class="eyebrow">Legal</span>
+    <h1>Terms of Service</h1>
+    <div class="meta">
+      <span>Effective Date: April 19, 2026</span>
+      <span>Last Updated: April 19, 2026</span>
+      <span>Version 1.0</span>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>In short</h2>
+    <p>You can use the App for free to track your personal expenses. Premium features are available through subscription. The App stores your data locally on your device, and you are responsible for keeping backups. The App is provided as-is, without warranties, and we are not liable for financial decisions you make based on it.</p>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#acceptance">Acceptance of Terms</a></li>
+      <li><a href="#eligibility">Eligibility</a></li>
+      <li><a href="#license">License to Use the App</a></li>
+      <li><a href="#user-content">Your Data and Content</a></li>
+      <li><a href="#subscriptions">Subscriptions and Billing</a></li>
+      <li><a href="#refunds">Refunds</a></li>
+      <li><a href="#acceptable-use">Acceptable Use</a></li>
+      <li><a href="#intellectual-property">Intellectual Property</a></li>
+      <li><a href="#disclaimers">Disclaimers</a></li>
+      <li><a href="#limitation">Limitation of Liability</a></li>
+      <li><a href="#indemnification">Indemnification</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#governing-law">Governing Law and Disputes</a></li>
+      <li><a href="#changes">Changes to These Terms</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <section>
+    <h2 id="acceptance"><span class="section-number">Section 01</span>Acceptance of Terms</h2>
+    <p>These Terms of Service ("Terms") govern your access to and use of the Expense Tracker mobile application ("the App"), developed and maintained by Bidhan, an individual developer based in Kathmandu, Nepal ("we", "us", or "our").</p>
+    <p>By downloading, installing, or using the App, you agree to be bound by these Terms and by our <a href="privacy.html">Privacy Policy</a>. If you do not agree, please do not use the App.</p>
+  </section>
+
+  <section>
+    <h2 id="eligibility"><span class="section-number">Section 02</span>Eligibility</h2>
+    <p>You must be at least 13 years old to use the App. If you are between 13 and 18 (or the age of majority in your jurisdiction), you may use the App only with the consent and supervision of a parent or legal guardian who accepts these Terms on your behalf.</p>
+    <p>By using the App, you represent that you meet these requirements and have the legal capacity to agree to these Terms.</p>
+  </section>
+
+  <section>
+    <h2 id="license"><span class="section-number">Section 03</span>License to Use the App</h2>
+    <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to install and use the App on devices you own or control, solely for your personal, non-commercial use.</p>
+    <p>You may not:</p>
+    <ul>
+      <li>Copy, modify, or create derivative works of the App.</li>
+      <li>Reverse-engineer, decompile, or disassemble the App, except as permitted by applicable law.</li>
+      <li>Sell, rent, lease, sublicense, or otherwise transfer the App or access to it.</li>
+      <li>Remove or alter any copyright, trademark, or other proprietary notices.</li>
+      <li>Use the App in any way that violates applicable laws or regulations.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="user-content"><span class="section-number">Section 04</span>Your Data and Content</h2>
+    <p>All expense records, categories, tags, notes, and other content you create in the App ("Your Data") belong to you. Your Data is stored locally on your device and, if you enable cloud backup, on your personal Google Drive or iCloud account.</p>
+    <p>You are solely responsible for:</p>
+    <ul>
+      <li>The accuracy of Your Data.</li>
+      <li>Maintaining backups of Your Data. Uninstalling the App or losing access to your device may result in permanent loss of Your Data if you have not enabled a backup.</li>
+      <li>Protecting access to your device and cloud account, which may contain Your Data.</li>
+    </ul>
+    <p>Because Your Data is stored on your device and on your own cloud accounts, we have no ability to retrieve, restore, or access it on your behalf.</p>
+  </section>
+
+  <section>
+    <h2 id="subscriptions"><span class="section-number">Section 05</span>Subscriptions and Billing</h2>
+
+    <h3>Free and premium tiers</h3>
+    <p>The core features of the App are available free of charge. Certain premium features are available through paid subscriptions ("Premium"). The exact features included in Premium may change over time and will be clearly labeled within the App.</p>
+
+    <h3>How subscriptions work</h3>
+    <p>Subscriptions are offered and processed exclusively through the platform on which you downloaded the App:</p>
+    <ul>
+      <li><strong>iOS users</strong> — subscriptions are managed by Apple through your App Store account. Payment is charged to your Apple ID.</li>
+      <li><strong>Android users</strong> — subscriptions are managed by Google through your Google Play account. Payment is charged to your Google account.</li>
+    </ul>
+
+    <h3>Auto-renewal</h3>
+    <p>Subscriptions renew automatically at the end of each billing cycle at the same price, unless you cancel at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours before the current period ends, at the rate shown at the time of purchase.</p>
+
+    <h3>Cancellation</h3>
+    <p>You can cancel your subscription at any time:</p>
+    <ul>
+      <li><strong>iOS</strong> — Settings → [your name] → Subscriptions → Expense Tracker → Cancel Subscription.</li>
+      <li><strong>Android</strong> — Google Play Store → Menu → Subscriptions → Expense Tracker → Cancel subscription.</li>
+    </ul>
+    <p>Cancellation takes effect at the end of the current billing period. You will continue to have access to Premium features until then.</p>
+
+    <h3>Price changes</h3>
+    <p>We may change subscription prices from time to time. If we do, we will notify you through the App or through the platform (Apple or Google) before the new price takes effect. You will have the option to accept the new price or cancel before the change takes effect.</p>
+
+    <h3>Free trials and promotional offers</h3>
+    <p>If we offer a free trial, we will clearly state its duration and terms. Unless you cancel before the trial ends, your subscription will automatically convert to a paid one at the standard rate. Promotional offers are subject to the terms stated at the time of the offer.</p>
+  </section>
+
+  <section>
+    <h2 id="refunds"><span class="section-number">Section 06</span>Refunds</h2>
+    <p>Because subscriptions are processed through Apple or Google, refund requests must be made through them directly:</p>
+    <ul>
+      <li><strong>iOS refunds</strong> — <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a></li>
+      <li><strong>Android refunds</strong> — <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play Refund Help</a></li>
+    </ul>
+    <p>Apple and Google make the final decision on refund eligibility based on their own policies. We do not control or override these decisions. You may also have statutory refund or cancellation rights under the laws of your country, which are not affected by these Terms.</p>
+  </section>
+
+  <section>
+    <h2 id="acceptable-use"><span class="section-number">Section 07</span>Acceptable Use</h2>
+    <p>You agree not to use the App to:</p>
+    <ul>
+      <li>Violate any law or regulation, or infringe the rights of others.</li>
+      <li>Interfere with, disrupt, or attempt to gain unauthorized access to the App or its infrastructure.</li>
+      <li>Use the App to engage in fraud, money laundering, or other illegal financial activities.</li>
+      <li>Attempt to bypass subscription controls or obtain Premium features through unauthorized means.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="intellectual-property"><span class="section-number">Section 08</span>Intellectual Property</h2>
+    <p>The App, including its source code, design, graphics, text, icons, logos, and any other content we provide, is owned by us or our licensors and is protected by copyright, trademark, and other intellectual property laws. Nothing in these Terms transfers any ownership rights to you.</p>
+    <p>Feedback or suggestions you provide about the App may be used by us without obligation or compensation to you.</p>
+  </section>
+
+  <section>
+    <h2 id="disclaimers"><span class="section-number">Section 09</span>Disclaimers</h2>
+    <div class="emphatic">
+      <p>The App is provided "as is" and "as available"</p>
+      <p>We make no warranties of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, non-infringement, accuracy, reliability, or uninterrupted operation.</p>
+      <p>We do not warrant that the App will be error-free, secure, or always available, or that defects will be corrected.</p>
+    </div>
+    <p>The App is a personal expense tracking tool, not a financial, legal, tax, or investment advisory service. Any information you see within the App, including summaries, charts, and category breakdowns, is based solely on the data you enter. We are not responsible for financial decisions you make based on the App.</p>
+    <p>You are responsible for verifying the accuracy of your records and consulting qualified professionals for financial, tax, or legal advice.</p>
+  </section>
+
+  <section>
+    <h2 id="limitation"><span class="section-number">Section 10</span>Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, in no event shall we be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, including but not limited to loss of profits, revenue, data, goodwill, or other intangible losses, arising out of or relating to your use of or inability to use the App — even if we have been advised of the possibility of such damages.</p>
+    <p>To the maximum extent permitted by law, our total aggregate liability to you for any claim arising out of or relating to the App or these Terms will not exceed the greater of (a) the total amount you paid to us for the App in the twelve months preceding the claim, or (b) USD $20.</p>
+    <p>Some jurisdictions do not allow the exclusion or limitation of certain damages. In such jurisdictions, our liability is limited to the greatest extent permitted by law.</p>
+  </section>
+
+  <section>
+    <h2 id="indemnification"><span class="section-number">Section 11</span>Indemnification</h2>
+    <p>You agree to indemnify and hold us harmless from any claims, damages, liabilities, costs, or expenses (including reasonable legal fees) arising from your use of the App, your violation of these Terms, or your violation of any rights of a third party.</p>
+  </section>
+
+  <section>
+    <h2 id="termination"><span class="section-number">Section 12</span>Termination</h2>
+    <p>You may stop using the App at any time by uninstalling it from your device.</p>
+    <p>We may suspend or terminate your access to the App or any paid features at any time, with or without notice, if we believe you have violated these Terms or if we decide to discontinue the App.</p>
+    <p>Upon termination, the license granted to you under these Terms ends immediately. Sections of these Terms that by their nature should survive termination (such as intellectual property, disclaimers, limitation of liability, indemnification, and governing law) will survive.</p>
+  </section>
+
+  <section>
+    <h2 id="governing-law"><span class="section-number">Section 13</span>Governing Law and Disputes</h2>
+    <p>These Terms are governed by the laws of Nepal, without regard to conflict-of-laws principles. Any dispute arising out of or relating to these Terms or the App will be resolved in the courts located in Kathmandu, Nepal, and you consent to the exclusive jurisdiction of such courts.</p>
+    <p>Nothing in this section limits any mandatory consumer protection rights available to you under the laws of your country of residence.</p>
+  </section>
+
+  <section>
+    <h2 id="changes"><span class="section-number">Section 14</span>Changes to These Terms</h2>
+    <p>We may revise these Terms from time to time. When we make material changes, we will update the "Last Updated" date at the top of this page and, where appropriate, provide notice within the App. Continued use of the App after changes take effect constitutes acceptance of the revised Terms. If you do not agree to the changes, you should stop using the App.</p>
+  </section>
+
+  <section>
+    <h2 id="contact"><span class="section-number">Section 15</span>Contact</h2>
+    <p>Questions about these Terms? Please reach out:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:expensetracker38@gmail.com">expensetracker38@gmail.com</a></li>
+      <li><strong>Developer:</strong> Bidhan (individual developer)</li>
+      <li><strong>Location:</strong> Kathmandu, Nepal</li>
+    </ul>
+  </section>
+
+  <footer class="page-footer">
+    <div>© 2026 Expense Tracker. All rights reserved.</div>
+    <div><a href="privacy.html">Privacy Policy</a></div>
+  </footer>
+
+</div>
+</body>
+</html>
